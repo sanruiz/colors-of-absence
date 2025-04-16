@@ -1,10 +1,18 @@
-const audioCard = document.getElementById('audioCard');
-const audio = document.getElementById('cardAudio');
+const audioElement = document.getElementById('sharedAudio');
 
-audioCard.addEventListener('click', () => {
-  if (audio.paused) {
-    audio.play();
-  } else {
-    audio.pause();
-  }
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    const audioSrc = card.getAttribute('data-audio');
+
+    if (audioElement.src.includes(audioSrc)) {
+      if (audioElement.paused) {
+        audioElement.play();
+      } else {
+        audioElement.pause();
+      }
+    } else {
+      audioElement.src = audioSrc;
+      audioElement.play();
+    }
+  });
 });

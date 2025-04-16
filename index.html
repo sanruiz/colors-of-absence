@@ -7,15 +7,38 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="card" id="audioCard">
-    <img src="card-image.png" alt="Grossery Empty" class="card-image" />
-    <div class="card-text">
-      <p class="title">GROSERY / EMPTY</p>
-      <p class="ref">Ref: CR-116</p>
+  <div class="card-container">
+    <div class="card" data-audio="audio/card-audio-1.m4a">
+      <img src="card-image-1.png" alt="Card 1" class="card-image" />
+      <div class="card-text">
+        <p class="title">GROSERY / EMPTY</p>
+        <p class="ref">Ref: CR-116</p>
+      </div>
     </div>
-    <audio id="cardAudio" src="audio/hora-del-almuerzo.m4a"></audio>
+    <div class="card" data-audio="audio/card-audio-2.m4a">
+      <img src="card-image-2.png" alt="Card 2" class="card-image" />
+      <div class="card-text">
+        <p class="title">GROSERY / EMPTY</p>
+        <p class="ref">Ref: CR-117</p>
+      </div>
+    </div>
+    <div class="card" data-audio="audio/card-audio-3.m4a">
+      <img src="card-image-3.png" alt="Card 3" class="card-image" />
+      <div class="card-text">
+        <p class="title">GROSERY / EMPTY</p>
+        <p class="ref">Ref: CR-118</p>
+      </div>
+    </div>
+    <div class="card" data-audio="audio/card-audio-4.m4a">
+      <img src="card-image-4.png" alt="Card 4" class="card-image" />
+      <div class="card-text">
+        <p class="title">GROSERY / EMPTY</p>
+        <p class="ref">Ref: CR-119</p>
+      </div>
+    </div>
   </div>
 
+  <audio id="sharedAudio"></audio>
   <script src="script.js"></script>
 </body>
 </html>

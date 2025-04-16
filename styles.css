@@ -1,21 +1,33 @@
 body {
-  background: #f5f5f5;
+  background: url('back.jpeg') no-repeat center center fixed;
+  background-size: cover;
   font-family: monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .card {
   border: 1px solid #ccc;
   padding: 16px;
-  max-width: 400px;
+  width: 220px;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  position: absolute;
 }
+
+.card:nth-child(1) { top: 20%; left: 10%; }
+.card:nth-child(2) { top: 40%; left: 50%; }
+.card:nth-child(3) { top: 70%; left: 20%; }
+.card:nth-child(4) { top: 60%; left: 70%; }
 
 .card-image {
   width: 100%;
