@@ -1,5 +1,5 @@
 body {
-  background: url('back.jpeg') no-repeat center center;
+  background: url('mapa.jpg') no-repeat;
   background-size: 200vw 200vh;
   font-family: monospace;
   font-size: 16px;
@@ -27,7 +27,7 @@ body {
   transform-origin: center center;
   display: flex;
   flex-wrap: nowrap;
-  width: 320px;
+  width: 350px;
   transition:
     transform 0.3s ease,      /* tu escala */
     height    0.3s ease;      /* altura */
@@ -46,11 +46,16 @@ body {
 
 .card:hover {
   transform: scale(1);
-  height: 320px;               /* nueva altura suficiente para columna */
-  flex-wrap: wrap;     
+  height: 350px;               /* nueva altura suficiente para columna */
+  flex-wrap: wrap;
   flex-direction: column;
   transform: scale(1);
   z-index: 10;
+  transition:
+  transform 0.3s ease,
+  height    0.3s ease,
+  width  0.3s ease;      /* tu escala */
+    /* altura */
   /* fuerza el “column” porque no cabe en una sola línea */
 }
 
@@ -62,11 +67,37 @@ body {
   margin-right: 0;
 }
 
+.card-text{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transition:
+    transform 0.3s ease,
+    height    0.3s ease,
+    width  0.3s ease;      /* tu escala */
+      /* altura */
+}
 
+.card:hover .card-text {
+  height: auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  justify-items: center;
+  align-items: center;
+}
 
 .card-text .title {
   font-weight: bold;
-  margin-bottom: 4px;
+  margin-bottom: 0px;
+  transition:
+  transform 0.3s ease,
+  height    0.3s ease,
+  width  0.3s ease;      /* tu escala */
+    /* altura */
 }
 
 .card-text .ref {
@@ -76,7 +107,7 @@ body {
 .card:nth-child(1) { top: 20%; left: 10%; }
 .card:nth-child(2) { top: 40%; left: 50%; }
 .card:nth-child(3) { top: 70%; left: 20%; }
-.card:nth-child(4) { top: 60%; left: 70%; }
+.card:nth-child(4) { top: 60%; left: 45%; }
 
 
 
