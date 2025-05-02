@@ -3,7 +3,7 @@ const cardContainer = document.querySelector('.card-container');
 
 function getCardHTML(item) {
   return `
-    <img src="/images/${item.image}" alt="${item.title}" class="card-image" />
+    <img src="images/${item.image}" alt="${item.title}" class="card-image" />
     <div class="card-text">
       <div>
         <p class="title">${item.title}
@@ -28,7 +28,7 @@ fetch('list.json')
     data.forEach((item, index) => {
       const card = document.createElement('div');
       card.classList.add('card');
-      card.setAttribute('data-audio', '/audio/' + item.sonido);
+      card.setAttribute('data-audio', 'audio/' + item.sonido);
       // Position cards in a 5x5 grid with slight random offsets for a natural look
       const columns = 5;
       const row     = Math.floor(index / columns);
